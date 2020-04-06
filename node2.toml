@@ -1,0 +1,43 @@
+[parity]
+# Custom chain
+chain = "chain.json"
+# Parity continously syncs the chain
+mode = "active"
+
+[account]
+# From: [0x003309897310b4a595021d29e65b0e6ceefa78af] you'll be able to send transactions without password.
+unlock = ["0x003309897310b4a595021d29e65b0e6ceefa78af"]
+# File at validator.pwd should contain passwords to unlock your accounts. One password per line.
+password = ["/home/ubuntu/.safe/validator.pwd"]
+
+[network]
+# Parity will listen for connections on port 30300.
+port = 30302
+
+[rpc]
+port = 8545
+#  JSON-RPC will be listening for connections on IP all.
+interface = "all"
+# Allows Cross-Origin Requests from domain 'all'.
+cors = ["all"]
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+
+[websockets]
+# JSON-RPC over WebSockets will be accessible on port 8544.
+port = 8544
+#  JSON-RPC will be listening for connections on IP all.
+interface = "all"
+
+[ipc]
+# You won't be able to use IPC to interact with Parity.
+disable = true
+
+[secretstore]
+# You won't be able to encrypt and decrypt secrets.
+disable = true
+
+[mining]
+# Account to sign consensus messages and issue blocks for non-PoW chains.
+engine_signer = "0x003309897310b4a595021d29e65b0e6ceefa78af"
+# New transactions will not cause a new pending block to be created.
+reseal_on_txs = "none"

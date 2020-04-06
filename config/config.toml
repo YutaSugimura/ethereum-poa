@@ -1,0 +1,11 @@
+[parity]
+chain = "chain.json"
+[network]
+port = 30300
+[rpc]
+port = 8545
+interface = "all"
+cors = ["all"]
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+[websockets]
+port = 8454

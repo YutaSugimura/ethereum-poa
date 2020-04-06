@@ -1,0 +1,23 @@
+[parity]
+chain = "test_chain.json"
+base_path = "/tmp/parity"
+
+[network]
+port = 30300
+min_peers = 2
+max_peers = 5
+
+[rpc]
+port = 8540
+interface = "all"
+cors = ["all"]
+
+[websockets]
+port = 8450
+
+[account]
+password = ["/home/ubuntu/Parity/test/node.pwd"]
+
+[mining]
+engine_signer = "0x0044b8388491f9c465620db228aa07923bd08e61"
+reseal_on_txs = "none"
